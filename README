@@ -1,0 +1,56 @@
+# 🧠 BarberMan Marketing IA
+
+Projeto de automação em Python que conecta dados reais (Clima) com IA  para criar mensagens de marketing dinâmicas.
+
+> **A ideia:** Ninguém corta cabelo quando chove. Esse script resolve isso criando promoções automáticas baseadas na previsão do tempo.
+
+---
+
+## 💡 O que o projeto faz (Na prática)
+
+Criei um script que roda sozinho e faz o seguinte fluxo:
+
+1.  **Consulta API de Clima:** Verifica a temperatura e condição (chuva/sol) da cidade em tempo real.
+2.  **Toma Decisões:** Se estiver chovendo, ele sabe que precisa focar em desconto. Se estiver calor, foca em "refrescar".
+3.  **Gera Copy com IA:** Em vez de usar frases prontas, integrei com a **Groq API (Llama 3)** para escrever um texto único e persuasivo para o WhatsApp a cada execução.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+Fiz esse projeto para praticar integração de sistemas e uso de LLMs via código.
+
+* **Python**: Lógica principal e requisições.
+* **Groq Cloud (Llama 3)**: Para gerar os textos de forma inteligente e rápida.
+* **Wttr.in**: Fonte de dados meteorológicos.
+* **Dotenv**: Para segurança das chaves de API (não subo credenciais pro GitHub).
+
+---
+
+## 🚀 Como rodar na sua máquina
+
+Se quiser testar a automação:
+
+1.  **Clone o repo:**
+    ```bash
+    git clone [https://github.com/ryan11ribeiro/BarberMan-Marketing-IA.git](https://github.com/ryan11ribeiro/BarberMan-Marketing-IA.git)
+    cd BarberMan-Marketing-IA
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Configure a Chave:**
+    Crie um arquivo `.env` e coloque sua chave gratuita da Groq:
+    ```env
+    GROQ_API_KEY=sua_chave_aqui
+    ```
+
+4.  **Rode:**
+    ```bash
+    python marketing.py
+    ```
+---
+Feito por **Ryan Ribeiro** 💻
